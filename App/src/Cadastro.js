@@ -28,6 +28,7 @@ export default function Cadastro() {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Cadastro</Text>
+      <Text style={styles.subtitulo}>Preencha com seus dados</Text>
       <View style={{ margin: 5 }}>
         <Text style={{ fontWeight: 'bold' }}>Nome Completo</Text>
         <TextInput 
@@ -82,8 +83,8 @@ export default function Cadastro() {
       <TouchableOpacity style={styles.botao} onPress={validarCampos}>
         <Text style={{ fontSize: 17, color: "#000" }}>Cadastre-se</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.botao}>
-        <Text style={{ fontSize: 17, color: "#000" }}>Faça seu Login</Text>
+      <TouchableOpacity style={styles.botaoLogin}>
+        <Text style={{ fontSize: 17, color: "#FFF" }}>Faça seu Login</Text>
       </TouchableOpacity>
     </View>
   );
@@ -100,6 +101,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     color: "#38C3FF"
+  },
+  subtitulo: {
+    fontSize: 18,
+    fontWeight: 'bold',
   },
   input: {
     width: 300,
@@ -119,5 +124,14 @@ const styles = StyleSheet.create({
   },
   erroInput: {
     borderColor: 'red'
+  },
+  botaoLogin: {
+    margin: 5,
+    width: 300,
+    height: 50,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#2783AB'
   }
 });
