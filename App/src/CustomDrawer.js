@@ -1,10 +1,13 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 export default function CustomDrawer(props) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Menu Personalizado</Text>
+      <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+        <Image source={require('./Img/Logo.png')} style={{ width: 200 }}/>
+      </View>
+      <Text style={styles.titulo}>Menu</Text>
       {props.state.routes.map((route, index) => (
         <TouchableOpacity
           key={index}
@@ -24,19 +27,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#f0f8ff',
     padding: 20,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 20,
+  titulo: {
+    fontSize: 27,
+    marginTop: 10,
+    marginBottom: 10
   },
   button: {
-    marginVertical: 10,
     padding: 10,
-    backgroundColor: '#14c5ec',
-    borderRadius: 10,
+    backgroundColor: '#38C3FF',
+    borderRadius: 5,
+    marginVertical: 5
   },
   buttonText: {
-    color: '#fff',
+    color: '#000',
     fontSize: 16,
   },
 });

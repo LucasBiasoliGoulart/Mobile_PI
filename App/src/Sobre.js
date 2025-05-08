@@ -4,8 +4,8 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Sobre() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Sobre o App</Text>
-      <Text style={styles.description}>Este é um aplicativo React Native com navegação personalizada.</Text>
+      <Text style={styles.titulo}>Sobre a SafePet</Text>
+      <Text style={styles.description}>A SafePet foi criada para ajudar os animais que foram abandonados e os que sofreram maus tratos pelos seus tutores.</Text>
     </View>
   );
 }
@@ -15,14 +15,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#f0f8ff'
   },
-  title: {
-    fontSize: 24,
+  titulo: {
+    fontSize: 30,
     fontWeight: 'bold',
+    color: "#38C3FF"
   },
   description: {
+    margin: 10,
     fontSize: 16,
-    textAlign: 'center',
+    textAlign: 'justify',
     marginTop: 10,
   },
 });
