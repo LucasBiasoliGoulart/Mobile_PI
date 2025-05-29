@@ -9,10 +9,10 @@ export default function Home() {
       </View>
       <Text style={styles.titutlo}>Bem-vindo à SafePet!</Text>
       <View style={{ alignItems: 'center', flexDirection: 'row'}}>
-        <TouchableOpacity style={styles.botao}>
+        <TouchableOpacity style={styles.botao} activeOpacity={0.6}>
           <Text style={{ color: "#000", fontSize: 17 }}>Saber Mais</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.botao}>
+        <TouchableOpacity style={styles.botao} activeOpacity={0.6}>
           <Text style={{ color: "#000", fontSize: 17 }}>Cadastre-se</Text>
         </TouchableOpacity>
       </View>
