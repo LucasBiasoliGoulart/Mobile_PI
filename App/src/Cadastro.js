@@ -30,7 +30,7 @@ export default function Cadastro() {
       <Text style={styles.titulo}>Cadastro</Text>
       <Text style={styles.subtitulo}>Preencha com seus dados</Text>
       <View style={{ margin: 5 }}>
-        <Text style={{ fontWeight: 'bold' }}>Nome Completo</Text>
+        <Text>Nome Completo</Text>
         <TextInput 
         style={[styles.input, erro.nome && styles.erroInput]} 
         value={nome}
@@ -39,7 +39,7 @@ export default function Cadastro() {
         />
       </View>
       <View style={{ margin: 5 }}>
-        <Text style={{ fontWeight: 'bold' }}>Email</Text>
+        <Text>Email</Text>
         <TextInput 
         style={[styles.input, erro.email && styles.erroInput]} 
         value={email}
@@ -49,7 +49,7 @@ export default function Cadastro() {
         />
       </View>
       <View style={{ margin: 5 }}>
-        <Text style={{ fontWeight: 'bold' }}>CPF</Text>
+        <Text>CPF</Text>
         <TextInput 
         style={[styles.input, erro.cpf && styles.erroInput]} 
         value={cpf} 
@@ -59,7 +59,7 @@ export default function Cadastro() {
         />
       </View>
       <View style={{ margin: 5 }}>
-        <Text style={{ fontWeight: 'bold' }}>Contato</Text>
+        <Text>Contato</Text>
         <TextInput 
         style={[styles.input, erro.contato && styles.erroInput]} 
         value={contato} 
@@ -69,7 +69,7 @@ export default function Cadastro() {
         />
       </View>
       <View style={{ margin: 5 }}>
-        <Text style={{ fontWeight: 'bold' }}>Gênero</Text>
+        <Text>Gênero</Text>
         <Picker 
         selectedValue={genero} 
         onValueChange={(itemValue)=> setGenero(itemValue)} 
@@ -80,10 +80,10 @@ export default function Cadastro() {
           <Picker.Item label='Outro' value="Outro"/>
         </Picker>
       </View>
-      <TouchableOpacity style={styles.botao} onPress={validarCampos}>
+      <TouchableOpacity style={styles.botao} onPress={validarCampos} activeOpacity={0.7}>
         <Text style={{ fontSize: 17, color: "#000" }}>Cadastre-se</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.botaoLogin}>
+      <TouchableOpacity style={styles.botaoLogin} activeOpacity={0.7}>
         <Text style={{ fontSize: 17, color: "#FFF" }}>Faça seu Login</Text>
       </TouchableOpacity>
     </View>
@@ -98,13 +98,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#f0f8ff"
   },
   titulo: {
-    fontSize: 30,
+    fontSize: 35,
     fontWeight: 'bold',
     color: "#38C3FF"
   },
   subtitulo: {
     fontSize: 18,
     fontWeight: 'bold',
+    marginTop: 10,
+    marginBottom: 10
   },
   input: {
     width: 300,
